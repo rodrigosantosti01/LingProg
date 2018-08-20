@@ -11,29 +11,15 @@
 
 
 
-texto = input("Digite um texto: ")
-texto = texto.replace("a", "4")
-texto = texto.replace("b", "ß")
-texto = texto.replace("c", "¢")
-texto = texto.replace("e", "3")
-texto = texto.replace("f", "ƒ")
-texto = texto.replace("g", "6")
-texto = texto.replace("h", "[-]")
-texto = texto.replace("i", "1")
-texto = texto.replace("j", "¿")
-texto = texto.replace("k", "x")
-texto = texto.replace("l", "£")
-texto = texto.replace("n", "/V")
-texto = texto.replace("o", "0")
-texto = texto.replace("p", "/*")
-texto = texto.replace("q", "<|")
-texto = texto.replace("r", "2")
-texto = texto.replace("s", "5")
-texto = texto.replace("t", "7")
-texto = texto.replace("u", "µ")
-texto = texto.replace("y", "≥")
-print( texto)
 
+
+from utilitybelt import change_charset
+
+texto = input("Digite um texto: ")
+alfabeto= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+chaves = "4bcd3ƒgh1?k£mnopqr57µvwxyz4BCD3FGHI?KLMNOP0R57UVWXYZ_"
+formatada = change_charset(texto,alfabeto,chaves)
+print (formatada)
 
 
 
