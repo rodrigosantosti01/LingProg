@@ -48,7 +48,8 @@ def espacoMedioOcupado(lista, total):
     media = (total) / (elementos + 1)
     # media = "{0:.2f}".format(media)
     return media
-    
+
+
 # MAIN
 usuarios = []
 posicao = 1
