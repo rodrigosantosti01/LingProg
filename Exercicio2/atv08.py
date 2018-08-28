@@ -3,8 +3,6 @@ import sys
 
 agenda = {}
 
-
-
 def incluirNovoNome(nome="", telefones=[]):
     agenda[nome] = telefones   
     return agenda
