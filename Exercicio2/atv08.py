@@ -45,7 +45,7 @@ def consultarTelefone(nome):
 if __name__ == '__main__':
     opcao = -1
     while opcao != 0:
-        opcao = int(input("tecle 0 - para sair  \n tecle 1 - para inserir o nome \n tecle 2 - para inserir telefones  \ntecle 3 - para remover \ntecle 4 - para remover o telefone \n tecle 5 - para consultar telefones"))
+        opcao = int(input("tecle 0 - para sair \ntecle 1 - para inserir o nome \ntecle 2 - para inserir telefones \ntecle 3 - para remover \ntecle 4 - para remover o telefone \ntecle 5 - para consultar telefones"))
         if opcao == 0:
             sys.exit(0)
         elif opcao ==1:

@@ -35,11 +35,11 @@ for chave, valor in corrida_kart.items():
         corredor_menor_tempo_nome = chave
         volta = min(valor['Voltas'], key=valor['Voltas'].get)
         
-def calcula_media(valores, tamanho):
+def media(valores, tamanho):
     return (sum(valores) / tamanho)
     
 for chave, valor in corrida_kart.items():
-    tempoMedio = calcula_media(valor['Voltas'].values(), len(valor['Voltas'].values()))
+    tempoMedio = media(valor['Voltas'].values(), len(valor['Voltas'].values()))
     tempo_final.update({chave:tempoMedio})
 
 classificacao_final = sorted(tempo_final.items(), key=lambda elem: elem[1])
