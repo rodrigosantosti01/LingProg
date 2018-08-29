@@ -13,7 +13,7 @@
 lista = []
 count = 0
 negativos = 0
-while count < 2 :
+while count < 5 :
 	numeros = int(input("Digite um numero: "))
 	lista.append(numeros)
 	count +=1
@@ -22,15 +22,31 @@ print (max(lista))
 print (sum(lista))
 print (lista.count(lista[0]))
 print (int(sum(lista)/len(lista)))
-print (float(sum(lista)/len(lista)))
+media = (int(sum(lista)/len(lista)))
+print("media",media)
+
+
+maisProximo = lista[0]
+dmp = media - lista[0]
+menorDiferenca = dmp
+
+for i in lista:
+	dmp = media - i
+	if(dmp == 0):
+		maisProximo = i
+	if(dmp < 0):
+		dmp = dmp *-1
+	if(dmp<menorDiferenca):
+		menorDiferenca = dmp
+		maisProximo = i 
+
+print("numero mais proximo: %s " %(maisProximo))
 
 for i in lista:
 	if i<0 :
 		negativos += i
-print (negativos)
+print ("numeros negativos: %s " %(negativos))
 
 
-quantidade_numeros_iguais = 0
-for j in lista:
-	aux = j
+
 	
