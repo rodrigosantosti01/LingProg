@@ -14,10 +14,13 @@ def espiao(lista):
 			if status == "nada":
 			 	status = "zero"
 			elif status == "zero":
-				status = "zero zero"
-			elif simbolo == 7:
+				status = "zero zero"	
+		elif simbolo == 7:
+			if status == "zero zero":
 				status = "zero zero sete"
-				return status
+				return True
+			else:
+				return False
 
 		
 
@@ -25,3 +28,4 @@ def espiao(lista):
 print(espiao([1,2,4,0,0,7,5]))
 print(espiao([1,0,2,4,0,5,7]))
 print(espiao([1,7,2,4,0,5,0]))
+print(espiao([1,0,2,4,0,7,0]))
