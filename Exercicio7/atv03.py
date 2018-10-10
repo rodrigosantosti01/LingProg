@@ -4,7 +4,11 @@
 # Ex: primnalg(7) = 7
 
 
-def prim_alg(numero):
-	return numero if numero<10 else prim_alg(numero//10)
-	
-print(prim_alg(5649))
+primnalg = lambda numero: numero if numero<10 else primnalg(numero//10)
+
+assert(primnalg(5649) == 5)
+assert(primnalg(7) == 7)
+
+
+print(primnalg(5649))
+print(primnalg(7))
