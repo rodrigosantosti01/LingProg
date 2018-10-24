@@ -48,6 +48,7 @@ class Ordena:
 @Ordena
 def funcao3(lista):
 	print(lista)
+	
 print(funcao3([30,0,5,2,1,100,4,20]))
 
 
