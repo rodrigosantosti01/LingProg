@@ -11,31 +11,53 @@
 
 
 
-valor = 5
-def cafe(f):
-    def decorador(adc):
-        return f(adc)
+
+def chocolate(f):
+    def decorador():
+        return  0.5 + f()
     return decorador 
 
-def cafe_funcao(adc):
-    return adc
+def espumaLeite(f):
+    def decorador():
+        return  0.2 + f()
+    return decorador 
 
 
-cafe_funcao = cafe(cafe_funcao)
+
+def caramelo(f):
+    def decorador():
+        return  0.3 + f()
+    return decorador 
+
+def caramelo(f):
+    def decorador():
+        return  0.3 + f()
+    return decorador 
+
+def canela(f):
+    def decorador():
+        return  0.1 + f()
+    return decorador 
+
+def cafe ():
+    return 5
+
+
 
 entrada = int(input("Menu: \n 1-Para Palitos de chocolate \n 2-Para espuma de leite \n 3-Para caramelo \n 4-Para Canela \n 0-Sair \n"))
 while (entrada != 0):
     if (entrada ==1):
         print("chocolate")
-        valor += cafe_funcao(0.50)
+        cafe= chocolate(cafe)
     if(entrada == 2):
         print("espuma de leite")
-        valor += cafe_funcao(0.20)
+        cafe = espumaLeite(cafe)
+        print(cafe())
     if(entrada == 3):
         print("Caramelo")
-        valor += cafe_funcao(0.10)
+        cafe = espumaLeite(cafe)
     if (entrada ==4):
         print("Canela")
-        valor  += cafe_funcao(0.30)
+        cafe = espumaLeite(cafe)
     entrada = int(input("Digite: \n 1-Para chocolate \n 2-Para espuma de leite \n 3-Para caramelo \n 4-Para Canela \n 0-Sair \n"))
-print(valor)
+print(cafe())
